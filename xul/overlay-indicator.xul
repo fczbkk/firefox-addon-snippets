@@ -1,0 +1,21 @@
+<!--
+This snippet shows you how to create a button with an overlay indicator.
+This kind of UI is used natively in addons for Chrome, where you can add
+up to 4 characters long text to a browser button.
+
+The trick is to use STACK (to lay two elements above each other) and then
+to pull the overlaying LABEL element outside the parent element a bit
+(setting "bottom" and "right" attributes to a small negative value will
+position the element outside, also it will prevent the element from stretching
+to full size of parent STACK element).
+
+The style of the overlay in this example is very basic, you will probably
+want to play with it a little bit more.
+-->
+
+<toolbarbutton tooltiptext="You got 10 new messages!">
+	<stack>
+		<image src="https://mail.google.com/mail/u/0/images/2/mail_icon_32.png" />
+		<label value="10" bottom="-5" right="-5" style="background: red; color: white; padding: 3px;" />
+	</stack>
+</toolbarbutton>
